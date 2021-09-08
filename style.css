@@ -1,8 +1,8 @@
 body{
     height:100vh;
     font-family:helvetica;
-    background-image: url("https://images.unsplash.com/photo-1592210454359-9043f067919b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VhdGhlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
     background-repeat: no-repeat;
+    background-image: url("https://wallpaperaccess.com/full/1540001.jpg");
     background-size:cover;
     display:flex;
     justify-content: space space-evenly;
@@ -10,25 +10,25 @@ body{
 }
 p{
     margin: 5px;
-    color:blue;
+    color:rgb(230, 59, 144);
+    font-family: 'Lobster', cursive;
 }
-#od{
-    background:rgba(256,256,256,.5);
+#wrapper{
+    background-color: rgb(178, 178, 216);
     width:300px;
     text-align:center;
-    border-radius:30px;
+    border-radius:10px;
 }
-#id{
+#info{
     width:200px;
     text-align:center;
     background:rgba(256,256,256,.6);
-    border-radius:30px;
+    border-radius:10px;
 }
 div{
     margin:10px auto;
 }
 input{
-    opacity: ;
     border:none;
     margin:10px auto;
     width:200px;
@@ -36,8 +36,13 @@ input{
     text-align:center;
     font-size:25px;
     padding:5px;
-    background-color:lightgreen;
+    background-color:rgb(97, 190, 94);
     border-radius:10px;
+    font-style: inherit;
+}
+input:hover{
+    background-color: rgb(64, 167, 46);
+    color: greenyellow;
 }
 button{
     color:blue;
@@ -51,7 +56,9 @@ button{
     border-radius:10px;
 }
 button:hover{
-    background-color:rgb(209, 141, 38);
+    background-color:rgb(202, 202, 202);
+    width: 218px;
+    height: 42px;
 }
 #location{
     font-size:20px;
