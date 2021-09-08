@@ -2,13 +2,12 @@ let text=document.querySelector("input");
 let btn=document.getElementById("btn");
 let weather=document.getElementById("weather");
 let loc=document.getElementById("location");
-let speed=document.getElementById("speed");
 let temp=document.getElementById("temp");
 let minmax=document.getElementById("minmax");
 let time=document.getElementById("time");
 start();
 function start(){
-    getweather("london")
+    getweather("mohali")
 }
 btn.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -17,7 +16,7 @@ btn.addEventListener("click",(e)=>{
     text.value="";
 });
 function getweather(input){
-    fetch(http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=cc7b365cdf72c6b1736b020dc6c87432)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=cc7b365cdf72c6b1736b020dc6c87432`)
     .then((result)=>{
         return result.json()
     })
@@ -26,8 +25,7 @@ function getweather(input){
         weather.innerHTML=txt;
         txt=data.sys.country;
         loc.innerHTML=input.toUpperCase()+','+txt;
-        txt=data.wind.speed;
-        speed.innerHTML=txt+" kms";
+
         txt=parseInt(data.main.temp-273);
         temp.innerHTML=txt+"*C";
         txt=parseInt(data.main.temp_min-273);
@@ -37,7 +35,7 @@ function getweather(input){
         time.innerHTML=txt;
     })
     .catch((err)=>{
-        alert("Enter Valid Name");
+        alert("Enter a Valid Place");
         console.log(err.message);
     });
 }
